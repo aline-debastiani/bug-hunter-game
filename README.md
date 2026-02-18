@@ -1,135 +1,92 @@
-# bug-hunter-game
-🎮 Interactive QA training game built with React. Players identify real-world software bugs and learn testing concepts through gameplay.
-🎮 Bug Hunter Game
+# 🎮 Bug Hunter Game
 
-An interactive web-based QA training game where players analyze real-world software scenarios, identify defects, and classify their severity.
+A QA-focused web game where players analyze real-world software scenarios, identify defects, and learn bug classification through gameplay.
 
-Built to practice frontend development and apply Quality Assurance concepts in a gamified experience.
+This project is built as a learning journey: step-by-step frontend development with a strong testing mindset.
 
-🚀 Project Goal
+---
 
-This project was created to:
+## ✨ Features (MVP)
 
-Practice modern frontend development using React
+- Mission list (bug scenarios)
+- Multiple-choice answers
+- Immediate feedback with explanations
+- Score persistence using LocalStorage
+- Clean UI with TailwindCSS
 
-Apply software testing knowledge in a practical context
+---
 
-Simulate real-world bug classification scenarios
+## 🧠 How It Works
 
-Structure clean, maintainable, and scalable code
+1. Pick a mission (scenario).
+2. Read the context and evidence.
+3. Choose the most accurate bug classification/root cause.
+4. See the explanation and earn points.
 
-Prepare for international QA/Automation opportunities
+---
 
-🧠 How the Game Works
+## 🛠 Tech Stack
 
-The player selects a mission.
+- React + Vite
+- TailwindCSS
+- React Router
+- PostCSS
+- LocalStorage
 
-Each mission presents:
+---
 
-Context
+## 📦 Getting Started
 
-Evidence
+### Requirements
+- Node.js (LTS recommended)
+- npm
 
-A testing-related question
+### Run locally
+```bash
+npm install
+npm run dev
 
-The player chooses the correct bug classification.
+Open the URL shown in your terminal (e.g. http://localhost:5173).
 
-The game calculates the score.
-
-The result screen explains the correct answer and impact.
-
-🛠️ Tech Stack
-
-⚛ React (Vite)
-
-🎨 TailwindCSS
-
-🌐 React Router
-
-💾 LocalStorage (state persistence)
-
-📂 Project Structure
+📁 Project Structure
 src/
-  components/     → Reusable UI components
-  pages/          → App screens (Home, Mission, Result)
-  data/           → Game missions (JSON)
-  core/           → Business logic & storage
+  components/   # Reusable UI components
+  pages/        # Screens (Home, Mission, Result)
+  data/         # Missions dataset (JSON)
+  core/         # Business logic (scoring, persistence, helpers)
+🧪 Testing Roadmap
+Planned test strategy:
 
-📈 Roadmap
+Unit tests for scoring and persistence logic
 
-Planned improvements:
+Integration tests for mission flow
 
- Severity-based scoring system
+E2E tests with Cypress
 
- Timer per mission
+CI with GitHub Actions
 
- Difficulty levels
+🗺 Roadmap
+ Severity-based scoring
+
+ Difficulty levels and timer
+
+ Hint system
 
  Leaderboard
 
  Admin panel to create missions
 
- Backend with authentication (Node + PostgreSQL)
+ Backend + Auth (Node + PostgreSQL)
 
- Automated tests (Unit + E2E with Cypress)
+ Automated test suite (Vitest + Cypress)
 
-🎯 QA Concepts Applied
-
+🎯 QA Concepts Practiced
 Bug classification
 
-Severity vs Priority
+Severity vs. priority (planned)
 
 Authentication flaws
 
-Idempotency issues
+Idempotency/double submit issues
 
-Real-world failure scenarios
-
-Clean separation of UI and business logic
-
-🧪 Future Testing Strategy
-
-Unit tests for scoring logic
-
-Integration tests for mission flow
-
-End-to-end tests with Cypress
-
-CI pipeline using GitHub Actions
-
-📸 Screenshots
-
-(Add screenshots here once UI is finalized)
-
-🌍 Why This Project Matters
-
-This project combines software development and quality assurance principles, demonstrating both technical implementation and testing mindset — essential skills for modern QA Engineers.
-
-👩‍💻 Author
-
-Developed by Aline Debastiani
-Quality Assurance enthusiast | Automation-focused | React learner
-
-🧩 3️⃣ Versão Mais Enxuta (caso queira algo mais direto)
-
-Se quiser algo mais simples:
-
-🎮 Bug Hunter Game
-
-A QA-focused web game where players identify software defects and classify bug severity.
-
-Built with React + TailwindCSS as a learning project combining frontend development and software testing concepts.
-
-Stack
-
-React (Vite)
-
-TailwindCSS
-
-React Router
-
-LocalStorage
-
-Goal
-
-To practice clean architecture, state management, and QA thinking through gamification.
+Clear separation of UI and business rules

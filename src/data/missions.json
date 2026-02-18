@@ -1,0 +1,38 @@
+[
+  {
+    "id": "M1",
+    "title": "Login aceita senha errada",
+    "context": "Usuário relata que consegue entrar com senha incorreta.",
+    "evidence": [
+      "Ao digitar senha '123', o sistema loga.",
+      "Não aparece mensagem de erro."
+    ],
+    "question": "Qual tipo de bug é esse?",
+    "options": [
+      { "id": "A", "label": "Bug de validação/autenticação" },
+      { "id": "B", "label": "Bug de layout (UI)" },
+      { "id": "C", "label": "Bug de performance" }
+    ],
+    "correctOptionId": "A",
+    "severity": "Critical",
+    "explanation": "Falha de autenticação permite acesso indevido. Impacto alto e risco de segurança."
+  },
+  {
+    "id": "M2",
+    "title": "Carrinho duplica item",
+    "context": "Ao clicar uma vez em “Adicionar ao carrinho”, o item aparece duas vezes.",
+    "evidence": [
+      "Acontece mais quando a internet está lenta.",
+      "O botão fica 'carregando' mas adiciona duplicado."
+    ],
+    "question": "Qual causa provável?",
+    "options": [
+      { "id": "A", "label": "Evento de clique disparando duas vezes / falta de idempotência" },
+      { "id": "B", "label": "Fonte errada no CSS" },
+      { "id": "C", "label": "Timezone do usuário" }
+    ],
+    "correctOptionId": "A",
+    "severity": "Major",
+    "explanation": "Pode ser double submit ou API sem proteção idempotente. Impacta compra e confiança."
+  }
+]
