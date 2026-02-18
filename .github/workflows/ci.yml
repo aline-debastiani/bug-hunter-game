@@ -1,11 +1,14 @@
-cat > .github/workflows/ci.yml <<'YAML'
 name: CI
 
-on:
+"on":
   push:
-    branches: ["main", "master"]
+    branches:
+      - main
+      - master
   pull_request:
-    branches: ["main", "master"]
+    branches:
+      - main
+      - master
 
 jobs:
   test:
@@ -33,4 +36,3 @@ jobs:
 
       - name: E2E (Cypress)
         run: npm run e2e
-YAML
