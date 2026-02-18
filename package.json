@@ -5,8 +5,8 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "dev": "vite",
-    "e2e": "start-server-and-test preview http://localhost:4173 cy:run",
-    "preview": "vite preview",
+    "e2e": "start-server-and-test preview http://127.0.0.1:4173 cy:run",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
     "test": "vitest"
   },
   "dependencies": {
