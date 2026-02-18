@@ -11,6 +11,7 @@ export default function Home() {
                     Each correct answer: <span className="text-slate-100 font-semibold">10</span> + severity bonus.
                 </p>
                 <button
+                    data-cy="reset-progress"
                     onClick={() => {
                         resetState();
                         location.reload();
@@ -25,6 +26,7 @@ export default function Home() {
                     <Link
                         key={m.id}
                         to={`/mission/${m.id}`}
+                        data-cy={`mission-card-${m.id}`}
                         className="group rounded-2xl bg-slate-800/40 p-4 ring-1 ring-white/10 hover:bg-slate-800/70"
                     >
                         <div className="flex items-center justify-between gap-3">

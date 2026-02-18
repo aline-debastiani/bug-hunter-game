@@ -1,12 +1,18 @@
 const bonusBySeverity = {
-    Critical: 5,
-    Major: 3,
-    Minor:1,
+  Critical: 5,
+  Major: 3,
+  Minor: 1,
 };
 
 export function calcPoints({ isCorrect, severity }) {
-    if (!isCorrect) return 0;
-    const base = 10;
-    const bonus = bonusBySeverity[severity] ?? 0;
-    return base + bonus;
+  if (!isCorrect) return 0;
+
+  const base = 10;
+  const bonus = bonusBySeverity[severity] ?? 0;
+
+  return base + bonus;
+}
+
+export function shouldAwardPoints({ missionId, answers }) {
+  return !answers.some((a) => a.missionId === missionId && a.earned > 0);
 }

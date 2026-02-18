@@ -32,6 +32,7 @@ export default function Result() {
   return (
     <Layout title="Mission result">
       <div
+        data-cy="result-card"
         className={[
           "rounded-2xl p-4 ring-1",
           last.isCorrect
@@ -42,9 +43,14 @@ export default function Result() {
         <div className="text-sm font-semibold">
           {last.isCorrect ? "Correct ✅" : "Not quite ❌"}
         </div>
-        <div className="mt-1 text-sm">
+        <div className="mt-1 text-sm" data-cy="points-earned">
           Points earned: <span className="font-semibold">{last.earned}</span>
         </div>
+        {last.isCorrect && last.canAward === false ? (
+        <div className="mt-2 text-xs text-slate-300" data-cy="no-points-message">
+            Points were not awarded because this mission was already scored previously.
+        </div>
+        ) : null}
       </div>
 
       <div className="mt-5 rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10">
